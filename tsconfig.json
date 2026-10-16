@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/ai-core" },
+    { "path": "./packages/ai-providers" },
+    { "path": "./packages/memory" },
+    { "path": "./packages/permissions" },
+    { "path": "./packages/mcp" },
+    { "path": "./packages/tools" },
+    { "path": "./packages/agent-runtime" },
+    { "path": "./packages/workflow" },
+    { "path": "./packages/scheduler" },
+    { "path": "./apps/desktop" }
+  ]
+}

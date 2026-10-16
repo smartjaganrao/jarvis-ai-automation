@@ -1,0 +1,43 @@
+{
+  "name": "jarvis-automation-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JARVIS — Personal AI Automation Operating System",
+  "main": "apps/desktop/dist/main/index.js",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "connectors/*"
+  ],
+  "scripts": {
+    "dev": "vite apps/desktop",
+    "build": "tsc -b && cd apps/desktop && npx tsc && npx vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b --noEmit",
+    "electron:dev": "cd apps/desktop && npx electron .",
+    "electron:build": "npm run build && cd apps/desktop && npx electron ."
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.1",
+    "electron": "^43.3.0",
+    "lucide-react": "^0.469.0",
+    "postcss": "^8.4.49",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "drizzle-orm": "^0.45.2"
+  }
+}
